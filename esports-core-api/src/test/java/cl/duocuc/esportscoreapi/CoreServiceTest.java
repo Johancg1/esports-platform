@@ -29,7 +29,7 @@ class CoreServiceTest {
     private CoreService coreService;
 
     @Test
-    void obtenerSocios_retornaListaDeUsuarios() {
+    void obtenerSociosMockito_retornaListaSinBaseDeDatos() {
         Plan plan = new Plan(1L, "Plan Pro - Valorant");
 
         Usuario usuario = new Usuario(
@@ -52,7 +52,7 @@ class CoreServiceTest {
     }
 
     @Test
-    void obtenerPlanes_retornaListaDePlanes() {
+    void obtenerPlanesMockito_retornaListaSinBaseDeDatos() {
         Plan plan = new Plan(1L, "Plan Amateur - League of Legends");
 
         when(planRepository.findAll()).thenReturn(List.of(plan));
